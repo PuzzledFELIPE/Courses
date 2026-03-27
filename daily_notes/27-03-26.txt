@@ -64,3 +64,64 @@ Inclusive color strategies:
   margin-right: 8px;
 }
 
+
+some CSS utilities for enhanced accessibility:
+/* Screen reader only text - visually hidden but accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .button {
+    border: 2px solid;
+  }
+}
+
+
+Link text best practices:
+  - Be specific: "Download the quarterly financial report" vs. "Download"
+  - Include file type and size: "(PDF, 1.2MB)" for downloadable files
+  - Mention if links open externally: "(opens in new window)" when appropriate
+  - Use active language: "Contact us" vs. "Contact page"
+  - Keep it concise: Aim for 2-8 words when possible
