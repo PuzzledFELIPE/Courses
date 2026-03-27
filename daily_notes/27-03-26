@@ -1,8 +1,66 @@
 Just learned how to do some git commands
 
-git init
-git commit
+git init --> creates a new empty repository
+git commit --m to send a message on your commit
 git add --> if I add just a "." it will add all the new files present in the directory
     |--> If I want to add some specific files I have to do "add XXXX.extension"
 git restore --staged
-git status
+git status --> shows if sth is waiting to be committed or not
+git branch --> creates a branch in my repository
+git merge --> merges my branch to the main branch
+git branch -d [branch-name]
+   |--> deletes a branch
+
+gh pr create --title "Your PR title" --body "Description of changes"
+  |--> this is the structure of a PR message 
+
+"good first issue"
+
+ways to clone a repository:
+# Using HTTPS
+git clone https://github.com/ProjectURL
+# Using SSH (requires SSH key setup)
+git clone git@github.com:username/repository.git
+# Using GitHub CLI
+
+
+Screen readers provide multiple navigation methods that make browsing efficient for experienced users:
+    - Sequential reading: Reads content from top to bottom, like following a book
+    - Landmark navigation: Jump between page sections (header, nav, main, footer)
+    - Heading navigation: Skip between headings to understand page structure
+    - Link lists: Generate a list of all links for quick access
+    - Form controls: Navigate directly between input fields and buttons
+
+Step-by-step testing checklist:
+    - Keyboard navigation: Use only Tab, Shift+Tab, Enter, Space, and Arrow keys
+    - Screen reader testing: Enable NVDA, VoiceOver, or Narrator and navigate with eyes closed
+    - Zoom testing: Test at 200% and 400% zoom levels
+    - Color contrast verification: Check all text and UI components
+    - Focus indicator testing: Ensure all interactive elements have visible focus states
+
+
+
+Inclusive color strategies:
+/* ❌ Bad: Using only color to indicate status */
+.error { color: red; }
+.success { color: green; }
+
+/* ✅ Good: Color plus icons and context */
+.error {
+  color: #d32f2f;
+  border-left: 4px solid #d32f2f;
+}
+.error::before {
+  content: "⚠️";
+  margin-right: 8px;
+}
+
+.success {
+  color: #2e7d32;
+  border-left: 4px solid #2e7d32;
+}
+.success::before {
+  content: "✅";
+  margin-right: 8px;
+}
+
