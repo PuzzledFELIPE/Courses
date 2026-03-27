@@ -125,3 +125,11 @@ Link text best practices:
   - Mention if links open externally: "(opens in new window)" when appropriate
   - Use active language: "Contact us" vs. "Contact page"
   - Keep it concise: Aim for 2-8 words when possible
+
+
+Javascript concatenates string and numbers. For example
+1 + "hello" = "1hello"
+
+let = can change but just inside a block 
+var = can change anywhere
+const = cannot change
