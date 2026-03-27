@@ -1,0 +1,8 @@
+Just learned how to do some git commands
+
+git init
+git commit
+git add --> if I add just a "." it will add all the new files present in the directory
+    |--> If I want to add some specific files I have to do "add XXXX.extension"
+git restore --staged
+git status
