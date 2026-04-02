@@ -1,0 +1,52 @@
+to add elements to the end of an array,  like [1, 2, 3] and I want to add 4,
+I need to use the following structure: arrayName.push(4), then it will be [1, 2, 3, 4] 
+
+In strings, to define some text to Upper letters like using caps lock, you have to use the structure:
+variable.toUpperCase() *note: if you don't use the parenthesis it wont get the variable value to do the function
+For lower just use toLowerCase
+
+The method "hasOwnProperty" is used to check if a object has a certain property
+
+for (h = 5; h >= 1; h--) example of a for loop declared in just one line
+
+The method join is used to join all the elements of an array into a string, and you put the separator in the
+()
+
+if I want to set a condition based in just one variable being true or false, I can use the structure:
+if (variable), then it will understand as true or false
+
+The structure:
+let firstGreaterThanTen = digits.find(num => num > 10);
+is used to create the function of the method, set the parameter and use it in the function. In this example, 
+the function created is to find the fist number greater than 10 in an array
+
+talking about operator we have:
+<
+<=
+>
+>=
+=== --> Strict equality: Compares two values and returns the true Boolean data type if values on the right and 
+left are equal AND are the same data type. So 5==="5" returns false
+!== --> inequality
+&& --> AND
+|| --> OR
+! --> NOT
+
+
+switch statement:
+switch (expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+Ternary expression
+let variable = condition ? returnThisIfTrue : returnThisIfFalse;
+It reads like a question: "Is this condition true? If yes, use this value. If no, use that value."
+
+functions can be parameters for other functions
