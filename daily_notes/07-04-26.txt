@@ -1,0 +1,23 @@
+💡 CSS Priority Order (highest to lowest):
+    -Inline styles (style attribute)
+    -IDs (#myId)
+    -Classes (.myClass) and attributes
+    -Element selectors (h1, div, p)
+    -Browser defaults
+
+
+-Inheritable Properties Include: color, font-family, font-size, 
+line-height, text-align, visibility
+
+-Non-Inheritable Properties Include: margin, padding, border, 
+width, height, position
+
+Responsive Design with Percentages
+Notice how all dimensions use percentages rather than fixed pixel values:
+
+Why this matters:
+
+Ensures the terrarium scales proportionally on any screen size
+Maintains the visual relationships between jar components
+Provides a consistent experience from mobile phones to large desktop monitors
+Allows the design to adapt without breaking the visual layout
