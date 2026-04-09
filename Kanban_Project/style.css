@@ -1,0 +1,75 @@
+body{
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    background-color: rgb(85, 85, 85);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    font-size: large;
+}
+
+.workspaces-header{
+    text-align: center;
+    padding: 1% 0 2% 0;
+    background-color: rgb(50, 49, 49);
+    position: sticky;
+    z-index: 1;
+}
+
+.functions{
+    display: flex;
+    justify-content: center;
+    gap: 0.5%;
+}
+
+#add-workspace-btn{
+    text-align: center;
+    background-color: rgb(79, 77, 77);
+    color: white;
+    font-size: x-large;
+    height: 15%;
+    width: 2%;
+    border-radius: 1rem;
+}
+
+#add-workspace-btn:hover{
+    cursor: pointer;
+    background-color: rgb(79, 77, 77, 0.7);
+    scale: 1.05;
+}
+
+#filter{
+    text-align: center;
+    background-color: rgb(79, 77, 77);
+    color: white;
+    font-size: x-large;
+    height: 5%;
+    width: 10%;
+    cursor: text;
+    border-radius: 1rem;
+}
+
+#project1{
+    background-color: rgb(50, 49, 49);
+    margin: 2% 0 0 2%;
+    padding: 2%;
+    border-radius: 1rem;
+    width: 50%;
+    height: 150px;
+}
+
+.project-title{
+    text-align: left, top;
+    font-size: x-large;
+    margin: 0 0 2% 0;
+    padding: 0 0 3% 0;
+}
+
+#project-description{
+    font-size: medium;
+    background-color: black;
+    text-align: top;
+    
+}

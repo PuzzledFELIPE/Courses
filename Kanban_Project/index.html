@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kanban Project</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <section class = "workspaces-header">
+            <div class = 'title'>
+                <h1>My projects</h1>
+            </div>
+            <div class = 'functions'>
+                <!-- Button to add workspace and filter to search an especific workspace -->
+                <button id="add-workspace-btn">+</button>
+                <label for="filter" class="filter-label"></label>
+                    <input type="text" id="filter" class="filter-input" placeholder="Filter">
+            </div>
+        </section>
+        <section class = "workspaces">
+            <!-- Workspaces will be dynamically added here -->
+            <div id = "project1">
+                <h2 class = "project-title">Project 1</h2>
+                <div id="project-description">
+                    <p class="description-text">This is the description of project 1.</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+
