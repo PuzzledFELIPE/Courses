@@ -30,7 +30,7 @@ body{
     color: white;
     font-size: x-large;
     height: 15%;
-    width: 2%;
+    width: 1.75%;
     border-radius: 1rem;
 }
 
@@ -51,25 +51,50 @@ body{
     border-radius: 1rem;
 }
 
-#project1{
+#project1, #project2{
     background-color: rgb(50, 49, 49);
-    margin: 2% 0 0 2%;
     padding: 2%;
     border-radius: 1rem;
+    position: absolute;
+    cursor: grab;
+    -webkit-user-select: none;
+    user-select: none;
     width: 50%;
     height: 150px;
+    /*visibility: hidden;*/
+}
+
+#project1{
+    top: 2%;
+    left: 2%;
+}
+
+#project2{
+    top: 22%;
+    left: 2%;
+}
+
+.workspaces{
+    position: relative;
+    min-height: 70vh;
 }
 
 .project-title{
     text-align: left, top;
     font-size: x-large;
-    margin: 0 0 2% 0;
-    padding: 0 0 3% 0;
+    margin: 0 0 0 0;
+    padding: 0 0 1% 0;
 }
 
-#project-description{
+.project-description{
     font-size: medium;
     background-color: black;
     text-align: top;
-    
+    height: 70%;
+    width: 40%;
+    border-radius: 1rem;    
+}
+
+.description-text{
+    padding: 4% 0 0 4%;
 }
