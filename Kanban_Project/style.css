@@ -51,7 +51,7 @@ body{
     border-radius: 1rem;
 }
 
-#project1, #project2{
+.project{
     background-color: rgb(50, 49, 49);
     padding: 2%;
     border-radius: 1rem;
@@ -69,10 +69,6 @@ body{
     left: 2%;
 }
 
-#project2{
-    top: 22%;
-    left: 2%;
-}
 
 .workspaces{
     position: relative;

@@ -1,5 +1,4 @@
 dragElement(document.getElementById('project1'));
-dragElement(document.getElementById('project2'));
 
 function dragElement(projectElement) {
     let startX = 0;
@@ -47,17 +46,17 @@ function dragElement(projectElement) {
         activePointerId = null;
     }
 }
+    
+let Project = document.getElementById('project1');
+const addButton = document.getElementById('add-workspace-btn');
 
-// Reset button functionality
-const resetButton = document.getElementById('reset-btn');
+addButton.addEventListener('click', () => {
+    const newProject = Project.cloneNode(true);
+    newProject.id = `project${document.querySelectorAll('.project').length + 1}`;
+    newProject.style.top = '';
+    newProject.style.left = '';
+    document.body.appendChild(newProject);
+    dragElement(document.getElementById(`project${document.querySelectorAll('.project').length}`));
+});
 
-if (resetButton) {
-    resetButton.addEventListener('click', () => {
-        // Reset positions of all projects to their initial state
-        for (let i = 1; i <= 2; i++) {
-            const project = document.getElementById(`project${i}`);
-            project.style.top = '';
-            project.style.left = '';
-        }
-    });
-}
+    
