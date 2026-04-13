@@ -49,14 +49,23 @@ function dragElement(projectElement) {
     
 let Project = document.getElementById('project1');
 const addButton = document.getElementById('add-workspace-btn');
+const workspacesContainer = document.querySelector('.workspaces');
 
 addButton.addEventListener('click', () => {
+    const projects = document.querySelectorAll('.project');
+    const lastProject = projects[projects.length - 1];
+    const gap = 20;
+
     const newProject = Project.cloneNode(true);
-    newProject.id = `project${document.querySelectorAll('.project').length + 1}`;
-    newProject.style.top = '';
-    newProject.style.left = '';
-    document.body.appendChild(newProject);
-    dragElement(document.getElementById(`project${document.querySelectorAll('.project').length}`));
+    const newProjectNumber = projects.length + 1;
+    newProject.id = `project${newProjectNumber}`;
+
+    // Put the new card right below the previous card.
+    newProject.style.top = `${lastProject.offsetTop + lastProject.offsetHeight + gap}px`;
+    newProject.style.left = `${lastProject.offsetLeft}px`;
+
+    workspacesContainer.appendChild(newProject);
+    dragElement(newProject);
 });
 
     
