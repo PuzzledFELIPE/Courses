@@ -8,7 +8,30 @@
         <script src="./script.js" defer></script>
     </head>
     <body>
-        
+        <section id="header">
+            <h2>Project Tasks</h2>
+            <button></button>
+            <label for="filter" class="filter-label">Filter:</label>
+                <input type="text" id="filter" class="filter-input" placeholder="Filter">
+        </section>
+        <section id="progress">
+            <div class="situation" id="Backlog">
+                <h3>Backlog</h3>
+                <!-- Tasks will be dynamically added here -->
+                 <div class="tasksLocation" id="backlogLocation"></div>
+            </div>
+            <div class="situation" id="inProgress">
+                <h3>In Progress</h3>
+                <!-- Tasks will be dynamically added here -->
+                 <div class="tasksLocation" id="inProgressLocation"></div>
+            </div>
+            <div class="situation" id="Done">
+                <h3>Done</h3>
+                <!-- Tasks will be dynamically added here -->
+                 <div class="tasksLocation" id="doneLocation"></div>
+            </div>
+        </section>
     </body>
+</html>
 
 
