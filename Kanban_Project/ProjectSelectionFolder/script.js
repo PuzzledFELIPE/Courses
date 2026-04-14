@@ -68,4 +68,34 @@ addButton.addEventListener('click', () => {
     dragElement(newProject);
 });
 
+/*Teste para fazer em uma branch nova
+const addButton = document.getElementById('add-workspace-btn');
+const workspacesContainer = document.querySelector('.workspacesContainer');
+let i = 0;
+
+addButton.addEventListener('click', () => {
+    const newProject = document.createElement('div');
+    newProject.className = 'project';
+    i = i + 1;
+
+    if (i === 1) {
+        newProject.style.top = '20px';
+        newProject.style.left = '20px';
+        const newProjectNumber = 1;
+        newProject.id = `project${newProjectNumber}`;
+    } else {
+        const newProjectNumber = projects.length + 1;
+        newProject.id = `project${newProjectNumber}`;
+        const lastProject = document.getElementById(`project${newProjectNumber - 1}`);
+        const gap = 20; // Gap between projects in pixels
+        newProject.style.top = `${lastProject.offsetTop + lastProject.offsetHeight + gap}px`;
+        newProject.style.left = `${lastProject.offsetLeft}px`;
+        // Put the new card right below the previous card.
+    }
+
+    console.log(`Adding project`);
+    workspacesContainer.appendChild(newProject);
+    dragElement(newProject);
+});*/
+
     
