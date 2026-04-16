@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kanban Project</title>
-        <link rel="stylesheet" href="./style.css">
-        <script src="./script.js" defer></script>
-    </head>
-    <body>
-        <section id="header">
-            <h2>Project Tasks</h2>
-            <button></button>
-            <label for="filter" class="filter-label">Filter:</label>
-                <input type="text" id="filter" class="filter-input" placeholder="Filter">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Board</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="panel board-header">
+            <div>
+                <a class="back-link" href="../ProjectSelectionFolder/ProjectSelection.html">Back to projects</a>
+                <h1 id="project-title">Project Board</h1>
+            </div>
+
+            <form id="task-form" class="task-form">
+                <input id="task-title" name="title" type="text" required maxlength="80" placeholder="New task title">
+                <input id="task-description" name="description" type="text" maxlength="160" placeholder="Short task description">
+                <select id="task-priority" name="priority" title="Task priority" aria-label="Task priority">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <div class="filter-wrap">
+                <label for="task-filter">Filter Tasks</label>
+                <input id="task-filter" type="text" placeholder="Search task title or description">
+            </div>
         </section>
-        <section id="progress">
-            <div class="situation" id="Backlog">
-                <h3>Backlog</h3>
-                <!-- Tasks will be dynamically added here -->
-                 <div class="tasksLocation" id="backlogLocation"></div>
-            </div>
-            <div class="situation" id="inProgress">
-                <h3>In Progress</h3>
-                <!-- Tasks will be dynamically added here -->
-                 <div class="tasksLocation" id="inProgressLocation"></div>
-            </div>
-            <div class="situation" id="Done">
-                <h3>Done</h3>
-                <!-- Tasks will be dynamically added here -->
-                 <div class="tasksLocation" id="doneLocation"></div>
-            </div>
+
+        <section class="board" id="board">
+            <article class="column" data-status="backlog">
+                <header>
+                    <h2>Backlog</h2>
+                </header>
+                <div class="dropzone" id="backlog-zone" data-status="backlog"></div>
+            </article>
+
+            <article class="column" data-status="in-progress">
+                <header>
+                    <h2>In Progress</h2>
+                </header>
+                <div class="dropzone" id="in-progress-zone" data-status="in-progress"></div>
+            </article>
+
+            <article class="column" data-status="done">
+                <header>
+                    <h2>Done</h2>
+                </header>
+                <div class="dropzone" id="done-zone" data-status="done"></div>
+            </article>
         </section>
-    </body>
+    </main>
+</body>
 </html>
 
 

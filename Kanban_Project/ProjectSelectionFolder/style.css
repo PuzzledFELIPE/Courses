@@ -1,96 +1,157 @@
-body{
-    font-family: Arial, Helvetica, sans-serif, sans-serif;
-    background-color: rgb(85, 85, 85);
-    color: white;
+:root {
+    --bg: #f4f1ea;
+    --panel: #fffdf8;
+    --ink: #241f19;
+    --muted: #73685b;
+    --accent: #d76d3f;
+    --accent-strong: #b14f24;
+    --danger: #b83333;
+    --stroke: #d8cec0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
-    padding: 0;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 10% 20%, #f6e6c5 0%, transparent 35%),
+        radial-gradient(circle at 90% 10%, #f2d8c3 0%, transparent 30%),
+        var(--bg);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.title{
-    font-size: large;
+.page {
+    width: min(1040px, 92vw);
+    margin: 2rem auto 3rem;
+    display: grid;
+    gap: 1rem;
 }
 
-.workspaces-header{
-    text-align: center;
-    padding: 1% 0 2% 0;
-    background-color: rgb(50, 49, 49);
-    position: sticky;
-    z-index: 1;
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 8px 24px rgba(36, 31, 25, 0.07);
 }
 
-.functions{
-    display: flex;
-    justify-content: center;
-    gap: 0.5%;
+.hero h1 {
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
 }
 
-#add-workspace-btn{
-    text-align: center;
-    background-color: rgb(79, 77, 77);
-    color: white;
-    font-size: x-large;
-    height: 15%;
-    width: 1.75%;
-    border-radius: 1rem;
+.hero p {
+    margin-bottom: 0;
+    color: var(--muted);
 }
 
-#add-workspace-btn:hover{
+.controls {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1rem;
+}
+
+.project-form {
+    display: grid;
+    gap: 0.45rem;
+}
+
+label {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+input,
+textarea,
+button {
+    border-radius: 10px;
+    border: 1px solid var(--stroke);
+    padding: 0.65rem 0.75rem;
+    font: inherit;
+}
+
+input,
+textarea {
+    background: #fff;
+}
+
+button {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    border: 0;
     cursor: pointer;
-    background-color: rgb(79, 77, 77, 0.7);
-    scale: 1.05;
+    transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
-#filter{
-    text-align: center;
-    background-color: rgb(79, 77, 77);
-    color: white;
-    font-size: x-large;
-    height: 5%;
-    width: 10%;
-    cursor: text;
-    border-radius: 1rem;
+button:hover {
+    transform: translateY(-1px);
+    background: var(--accent-strong);
 }
 
-.project{
-    background-color: rgb(50, 49, 49);
-    padding: 2%;
-    border-radius: 1rem;
-    position: absolute;
-    cursor: grab;
-    -webkit-user-select: none;
-    user-select: none;
-    width: 50%;
-    height: 150px;
-    /*visibility: hidden;*/
+.filter-wrap {
+    display: grid;
+    align-content: start;
+    gap: 0.45rem;
 }
 
-#project1{
-    top: 2%;
-    left: 2%;
+.list-panel h2 {
+    margin-top: 0;
 }
 
-
-.workspaces{
-    position: relative;
-    min-height: 70vh;
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.85rem;
 }
 
-.project-title{
-    text-align: left, top;
-    font-size: x-large;
-    margin: 0 0 0 0;
-    padding: 0 0 1% 0;
+.project-card {
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+    padding: 0.85rem;
+    background: #fff;
+    display: grid;
+    gap: 0.5rem;
 }
 
-.project-description{
-    font-size: medium;
-    background-color: black;
-    text-align: top;
-    height: 70%;
-    width: 40%;
-    border-radius: 1rem;    
+.project-card h3 {
+    margin: 0;
 }
 
-.description-text{
-    padding: 4% 0 0 4%;
+.project-description {
+    margin: 0;
+    color: var(--muted);
+    min-height: 2.8rem;
+}
+
+.project-meta {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.project-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-actions button {
+    flex: 1;
+}
+
+.project-actions .danger {
+    background: var(--danger);
+}
+
+.empty-state {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    .controls {
+        grid-template-columns: 1fr;
+    }
 }

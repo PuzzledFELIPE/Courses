@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kanban Project</title>
-        <link rel="stylesheet" href="./style.css">
-        <script src="./script.js" defer></script>
-    </head>
-    <body>
-        <section class = "workspaces-header">
-            <div class = 'title'>
-                <h1>My projects</h1>
-            </div>
-            <div class = 'functions'>
-                <!-- Button to add workspace and filter to search an especific workspace -->
-                <button id="add-workspace-btn">+</button>
-                <label for="filter" class="filter-label"></label>
-                    <input type="text" id="filter" class="filter-input" placeholder="Filter">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Projects</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="panel hero">
+            <h1>Kanban Projects</h1>
+            <p>Manage your projects and open each board to track tasks by status.</p>
+        </section>
+
+        <section class="panel controls">
+            <form id="project-form" class="project-form">
+                <label for="project-name">Project Name</label>
+                <input id="project-name" name="name" type="text" required maxlength="60" placeholder="Example: Website redesign">
+
+                <label for="project-description">Description</label>
+                <textarea id="project-description" name="description" rows="3" maxlength="220" placeholder="What is this project about?"></textarea>
+
+                <button type="submit" id="add-project-btn">Add Project</button>
+            </form>
+
+            <div class="filter-wrap">
+                <label for="filter">Filter Projects</label>
+                <input type="text" id="filter" class="filter-input" placeholder="Search by name or description">
             </div>
         </section>
-        <section class = "workspaces">
-            <!-- Workspaces will be dynamically added here -->
-            <div  class = "project" id = "project1">
-                <h2 class = "project-title">Project 1</h2>
-                <div class="project-description">
-                    <p class="description-text">This is the description of project 1.</p>
-                </div>
-            </div>
+
+        <section class="panel list-panel">
+            <h2>Your Projects</h2>
+            <div id="projects-list" class="projects-list" aria-live="polite"></div>
+            <p id="empty-state" class="empty-state">No projects yet. Create your first project above.</p>
         </section>
-    </body>
+    </main>
+</body>
 </html>
 
 

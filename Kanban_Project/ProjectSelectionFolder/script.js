@@ -1,101 +1,139 @@
-dragElement(document.getElementById('project1'));
+const STORAGE_KEY = "kanbanData_v1";
 
-function dragElement(projectElement) {
-    let startX = 0;
-    let startY = 0;
-    let startTop = 0;
-    let startLeft = 0;
-    let activePointerId = null;
+const projectForm = document.getElementById("project-form");
+const filterInput = document.getElementById("filter");
+const projectsList = document.getElementById("projects-list");
+const emptyState = document.getElementById("empty-state");
 
-    projectElement.onpointerdown = pointerDrag;
-
-    function pointerDrag(e) {
-        // Prevent default browser behavior (like text selection)
-        e.preventDefault();
-        activePointerId = e.pointerId;
-        projectElement.setPointerCapture(e.pointerId);
-
-        const computedStyle = window.getComputedStyle(projectElement);
-        startTop = parseFloat(computedStyle.top) || projectElement.offsetTop;
-        startLeft = parseFloat(computedStyle.left) || projectElement.offsetLeft;
-        
-        // Capture the initial mouse/touch position
-        startX = e.clientX;
-        startY = e.clientY;
-        
-        // Set up event listeners for the dragging process
-        document.onpointermove = elementDrag;
-        document.onpointerup = stopElementDrag;
+function loadData() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) {
+        return { projects: [] };
     }
 
-    function elementDrag(e) {
-        // Apply the movement to the element's position
-        projectElement.style.top = (startTop + (e.clientY - startY)) + 'px';
-        projectElement.style.left = (startLeft + (e.clientX - startX)) + 'px';
-    }
-
-    function stopElementDrag() {
-        // Remove the document-level event listeners
-        document.onpointerup = null;
-        document.onpointermove = null;
-
-        if (activePointerId !== null && projectElement.hasPointerCapture(activePointerId)) {
-            projectElement.releasePointerCapture(activePointerId);
+    try {
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed.projects)) {
+            return { projects: [] };
         }
-
-        activePointerId = null;
+        return parsed;
+    } catch (error) {
+        console.error("Could not parse localStorage data", error);
+        return { projects: [] };
     }
 }
-    
-let Project = document.getElementById('project1');
-const addButton = document.getElementById('add-workspace-btn');
-const workspacesContainer = document.querySelector('.workspaces');
 
-addButton.addEventListener('click', () => {
-    const projects = document.querySelectorAll('.project');
-    const lastProject = projects[projects.length - 1];
-    const gap = 20;
+function saveData(data) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
 
-    const newProject = Project.cloneNode(true);
-    const newProjectNumber = projects.length + 1;
-    newProject.id = `project${newProjectNumber}`;
+function createId(prefix) {
+    return `${prefix}-${crypto.randomUUID()}`;
+}
 
-    // Put the new card right below the previous card.
-    newProject.style.top = `${lastProject.offsetTop + lastProject.offsetHeight + gap}px`;
-    newProject.style.left = `${lastProject.offsetLeft}px`;
+function createProject(name, description) {
+    return {
+        id: createId("project"),
+        name: name.trim(),
+        description: description.trim(),
+        createdAt: Date.now(),
+        tasks: []
+    };
+}
 
-    workspacesContainer.appendChild(newProject);
-    dragElement(newProject);
-});
-
-/*Teste para fazer em uma branch nova
-const addButton = document.getElementById('add-workspace-btn');
-const workspacesContainer = document.querySelector('.workspacesContainer');
-let i = 0;
-
-addButton.addEventListener('click', () => {
-    const newProject = document.createElement('div');
-    newProject.className = 'project';
-    i = i + 1;
-
-    if (i === 1) {
-        newProject.style.top = '20px';
-        newProject.style.left = '20px';
-        const newProjectNumber = 1;
-        newProject.id = `project${newProjectNumber}`;
-    } else {
-        const newProjectNumber = projects.length + 1;
-        newProject.id = `project${newProjectNumber}`;
-        const lastProject = document.getElementById(`project${newProjectNumber - 1}`);
-        const gap = 20; // Gap between projects in pixels
-        newProject.style.top = `${lastProject.offsetTop + lastProject.offsetHeight + gap}px`;
-        newProject.style.left = `${lastProject.offsetLeft}px`;
-        // Put the new card right below the previous card.
+function projectMatchesFilter(project, filterText) {
+    const query = filterText.trim().toLowerCase();
+    if (!query) {
+        return true;
     }
 
-    console.log(`Adding project`);
-    workspacesContainer.appendChild(newProject);
-    dragElement(newProject);
-});*/
+    return (
+        project.name.toLowerCase().includes(query) ||
+        project.description.toLowerCase().includes(query)
+    );
+}
+
+function renderProjects() {
+    const data = loadData();
+    const filterText = filterInput.value;
+    const visibleProjects = data.projects.filter((project) => projectMatchesFilter(project, filterText));
+
+    projectsList.innerHTML = "";
+
+    visibleProjects.forEach((project) => {
+        const card = document.createElement("article");
+        card.className = "project-card";
+
+        const title = document.createElement("h3");
+        title.textContent = project.name;
+
+        const description = document.createElement("p");
+        description.className = "project-description";
+        description.textContent = project.description || "No description.";
+
+        const meta = document.createElement("p");
+        meta.className = "project-meta";
+        meta.textContent = `Tasks: ${project.tasks.length}`;
+
+        const actions = document.createElement("div");
+        actions.className = "project-actions";
+
+        const openButton = document.createElement("button");
+        openButton.type = "button";
+        openButton.textContent = "Open Board";
+        openButton.addEventListener("click", () => {
+            const encodedId = encodeURIComponent(project.id);
+            window.location.href = `../ProjectTasksFolder/ProjectTasks.html?projectId=${encodedId}`;
+        });
+
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.className = "danger";
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", () => {
+            const confirmed = window.confirm(`Delete project "${project.name}"?`);
+            if (!confirmed) {
+                return;
+            }
+
+            const nextData = loadData();
+            nextData.projects = nextData.projects.filter((item) => item.id !== project.id);
+            saveData(nextData);
+            renderProjects();
+        });
+
+        actions.append(openButton, deleteButton);
+        card.append(title, description, meta, actions);
+        projectsList.appendChild(card);
+    });
+
+    const hasProjects = visibleProjects.length > 0;
+    emptyState.hidden = hasProjects;
+}
+
+projectForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nameInput = document.getElementById("project-name");
+    const descriptionInput = document.getElementById("project-description");
+    const name = nameInput.value;
+    const description = descriptionInput.value;
+
+    if (!name.trim()) {
+        nameInput.focus();
+        return;
+    }
+
+    const data = loadData();
+    data.projects.unshift(createProject(name, description));
+    saveData(data);
+
+    projectForm.reset();
+    renderProjects();
+});
+
+filterInput.addEventListener("input", renderProjects);
+
+renderProjects();
 
     
