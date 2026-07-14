@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e89b18e8-1fbe-4a33-97f6-fbd7ca6f3a9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+    <list default="true" id="e89b18e8-1fbe-4a33-97f6-fbd7ca6f3a9b" name="Changes" comment="Changes in Bank account excercise">
+      <change afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Conta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -14,6 +14,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="18" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,6 +40,69 @@
     &quot;accountId&quot;: &quot;84ff6286-2708-4308-b815-880b88688d41&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.623412695592186" />
+      <entry key="MS500" value="3.4883353221519635" />
+      <entry key="S2" value="10.287040865565674" />
+      <entry key="S5" value="24.44239076372417" />
+      <entry key="S10" value="41.98975800936517" />
+      <entry key="S30" value="68.25239435320943" />
+      <entry key="S60" value="78.52435243454636" />
+      <entry key="M2" value="86.59177823067438" />
+      <entry key="M5" value="128.07998724728517" />
+      <entry key="M10" value="206.12126547411452" />
+      <entry key="M15" value="260.72409271937494" />
+      <entry key="M30" value="344.3343646514126" />
+      <entry key="H1" value="402.2475174300944" />
+      <entry key="H2" value="436.52865491259035" />
+      <entry key="H4" value="455.2068579610779" />
+      <entry key="D1" value="471.620666679489" />
+      <entry key="W1" value="474.5152261242893" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="5.80669625274951E-143" />
+      <entry key="S5" value="1.275180443522301E-57" />
+      <entry key="S10" value="3.571043634883442E-29" />
+      <entry key="S30" value="3.429101432163643E-10" />
+      <entry key="S60" value="2.3943788691085098E-5" />
+      <entry key="M2" value="0.008851043729617031" />
+      <entry key="M5" value="0.40370150503220176" />
+      <entry key="M10" value="1.5323969797681787" />
+      <entry key="M15" value="2.4070683390647267" />
+      <entry key="M30" value="3.7939332405245305" />
+      <entry key="H1" value="4.769135591572289" />
+      <entry key="H2" value="5.348727830352801" />
+      <entry key="H4" value="5.664866319754406" />
+      <entry key="D1" value="5.942776976698581" />
+      <entry key="W1" value="5.991791146147208" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.5831861984218523" />
+      <entry key="MS500" value="3.4702105692953715" />
+      <entry key="S2" value="10.271894436380334" />
+      <entry key="S5" value="24.428178116932237" />
+      <entry key="S10" value="41.97762066557475" />
+      <entry key="S30" value="68.24582716672259" />
+      <entry key="S60" value="78.5205980920723" />
+      <entry key="M2" value="86.59843903268555" />
+      <entry key="M5" value="128.48061094581118" />
+      <entry key="M10" value="207.64925575240161" />
+      <entry key="M15" value="263.12677564168166" />
+      <entry key="M30" value="348.12496744771687" />
+      <entry key="H1" value="407.01458947720823" />
+      <entry key="H2" value="441.8762327693756" />
+      <entry key="H4" value="460.8711170740444" />
+      <entry key="D1" value="477.56333773556196" />
+      <entry key="W1" value="480.50700202002326" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1,
   &quot;fromUser&quot;: false
@@ -49,6 +115,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
@@ -78,19 +145,22 @@
       <option name="presentableId" value="Default" />
       <updated>1783740555792</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changes in Bank account excercise">
+      <option name="closed" value="true" />
+      <created>1783801155259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783801155259</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes in Bank account excercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in Bank account excercise" />
   </component>
 </project>
