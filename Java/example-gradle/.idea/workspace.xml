@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d45cd2b6-2611-4418-a924-1a7d0de77ff3" name="Changes" comment="exploring some gradle functions">
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+    <list default="true" id="d45cd2b6-2611-4418-a924-1a7d0de77ff3" name="Changes" comment="gradle">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,61 +86,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000000002" />
-      <entry key="MS500" value="1.0006818180815862" />
-      <entry key="S2" value="1.1913692500774151" />
-      <entry key="S5" value="1.7418000730766265" />
-      <entry key="S10" value="2.5511660354515846" />
-      <entry key="S30" value="6.491080728406659" />
-      <entry key="S60" value="9.947166017354899" />
-      <entry key="M2" value="13.900586990956251" />
-      <entry key="M5" value="27.21790303305813" />
-      <entry key="M10" value="55.268550144912986" />
-      <entry key="M15" value="78.41697117272527" />
-      <entry key="M30" value="118.12519704640361" />
-      <entry key="H1" value="148.06592484893613" />
-      <entry key="H2" value="166.58461122613292" />
-      <entry key="H4" value="176.9016943037068" />
-      <entry key="D1" value="186.09341873485397" />
-      <entry key="W1" value="187.7262032365193" />
+      <entry key="MS100" value="1.0299770037289144" />
+      <entry key="MS500" value="1.4958583653691466" />
+      <entry key="S2" value="1.8391496371065417" />
+      <entry key="S5" value="1.9322572391829231" />
+      <entry key="S10" value="1.9655346908248248" />
+      <entry key="S30" value="1.988943045947278" />
+      <entry key="S60" value="2.0870616256822845" />
+      <entry key="M2" value="3.340366625839267" />
+      <entry key="M5" value="12.687132909291527" />
+      <entry key="M10" value="36.633609620847366" />
+      <entry key="M15" value="59.42378205732476" />
+      <entry key="M30" value="103.08437883854825" />
+      <entry key="H1" value="138.97016649394914" />
+      <entry key="H2" value="162.22132982516587" />
+      <entry key="H4" value="175.49011052888363" />
+      <entry key="D1" value="187.49041389201324" />
+      <entry key="W1" value="189.63918294930812" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.755497463415035E-252" />
-      <entry key="S2" value="1.1515970141205657E-63" />
-      <entry key="S5" value="7.006066555369132E-26" />
-      <entry key="S10" value="3.3143220436788874E-13" />
-      <entry key="S30" value="1.404998958792299E-4" />
-      <entry key="S60" value="0.023062922958465782" />
-      <entry key="M2" value="0.3658213801323959" />
-      <entry key="M5" value="4.099668630237411" />
-      <entry key="M10" value="12.453345408259233" />
-      <entry key="M15" value="18.7471278562706" />
-      <entry key="M30" value="28.769629457446275" />
-      <entry key="H1" value="35.89580873893238" />
-      <entry key="H2" value="40.16718779603464" />
-      <entry key="H4" value="42.50870631709656" />
-      <entry key="D1" value="44.57395640743058" />
-      <entry key="W1" value="44.93886569324901" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.4770818179274247E-124" />
+      <entry key="S5" value="3.0811714672953205E-50" />
+      <entry key="S10" value="2.197938365383089E-25" />
+      <entry key="S30" value="1.2252261871153875E-8" />
+      <entry key="S60" value="2.1536964010070319E-4" />
+      <entry key="M2" value="0.03535119921460938" />
+      <entry key="M5" value="1.6099143875236903" />
+      <entry key="M10" value="7.803924288577598" />
+      <entry key="M15" value="13.728383951886261" />
+      <entry key="M30" value="24.61935134156388" />
+      <entry key="H1" value="33.20587367705438" />
+      <entry key="H2" value="38.63287342845827" />
+      <entry key="H4" value="41.68892345417052" />
+      <entry key="D1" value="44.42952287067431" />
+      <entry key="W1" value="44.918034467392175" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.7351568072399228E-13" />
-      <entry key="MS500" value="0.0029626265228266642" />
-      <entry key="S2" value="0.3653957937782975" />
-      <entry key="S5" value="1.2047447940494564" />
-      <entry key="S10" value="2.1904886485287105" />
-      <entry key="S30" value="6.282370688479398" />
-      <entry key="S60" value="9.83391034133026" />
-      <entry key="M2" value="14.17372604835446" />
-      <entry key="M5" value="31.238210211618714" />
-      <entry key="M10" value="67.64359124784748" />
-      <entry key="M15" value="97.09247705554091" />
-      <entry key="M30" value="146.8431740247507" />
-      <entry key="H1" value="183.9301295567587" />
-      <entry key="H2" value="206.73423806616955" />
-      <entry key="H4" value="219.40113389175536" />
-      <entry key="D1" value="230.665758815422" />
-      <entry key="W1" value="232.6648362064178" />
+      <entry key="MS100" value="0.9948922058589196" />
+      <entry key="MS500" value="1.4855257168848113" />
+      <entry key="S2" value="1.835965393376338" />
+      <entry key="S5" value="1.9309183645976444" />
+      <entry key="S10" value="1.9648536064397149" />
+      <entry key="S30" value="1.9886951523852268" />
+      <entry key="S60" value="2.085888820035383" />
+      <entry key="M2" value="3.366703778949423" />
+      <entry key="M5" value="14.265859456778637" />
+      <entry key="M10" value="44.38845274493287" />
+      <entry key="M15" value="73.09971006429735" />
+      <entry key="M30" value="127.6595251858078" />
+      <entry key="H1" value="172.1468025354049" />
+      <entry key="H2" value="200.83731213189623" />
+      <entry key="H4" value="217.16994548206623" />
+      <entry key="D1" value="231.91832559300354" />
+      <entry key="W1" value="234.55698478976691" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -151,29 +151,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.example-gradle [:br.com.dio.Main.main()].executor": "Run",
-    "Gradle.example-gradle [build].executor": "Run",
-    "Gradle.example-gradle [clean].executor": "Run",
-    "Gradle.example-gradle [generatePomFileForMavenJavaPublication].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Felipe/Documentos/GitHub/Courses/Java/example-gradle/src/main/java/br/com/dio/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.example-gradle [:br.com.dio.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.example-gradle [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.example-gradle [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.example-gradle [generatePomFileForMavenJavaPublication].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Felipe/Documentos/GitHub/Courses/Java/example-gradle/src/main/java/br/com/dio/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.example-gradle [build]">
     <configuration name="example-gradle [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -281,6 +281,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="exploring some gradle functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="exploring some gradle functions" />
+    <MESSAGE value="gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="gradle" />
   </component>
 </project>
