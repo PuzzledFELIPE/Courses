@@ -1,6 +1,7 @@
 plugins {
     id("java")
     checkstyle
+    `maven-publish`
 }
 
 group = "br.com.dio"
@@ -34,4 +35,12 @@ tasks.withType<Checkstyle>().configureEach {
 
 tasks.checkstyleMain{
     source = fileTree("src/main/java")
+}
+
+publishing{
+    publications{
+        create<MavenPublication>("mavenJava"){
+            from(components["java"])
+        }
+    }
 }
